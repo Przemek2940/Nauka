@@ -13,7 +13,7 @@ roznica = abs(wiekpythona - wiek)
 # komunikat
 print("Mów mi Python. Mam", wiekpythona, "lat. Witaj w moim świecie " + str(imie) + ".")
 
-#instrukcja warunkowa
+# instrukcja warunkowa
 if wiekpythona < wiek:
     print("Jesteś starszy ode mnie o " + str(roznica) + " lat.")
 
