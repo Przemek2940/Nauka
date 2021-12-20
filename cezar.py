@@ -4,11 +4,16 @@ decyzja = input("""Jeśli chcesz zaszyfrować wiadomość - wpisz 1\n
 Jeśli chcesz odszyfrować wiadomość - wpisz 2\n""")
 KLUCZ = int(input("Jaki ma być klucz?\n"))
 
+znaki = [' ', '!', '"', '#', '$', '%', '&', "'", '(', ')',
+         '*', '+', ',', '-', '.', '/', '0', '1', '2', '3',
+         '4', '5', '6', '7', '8', '9', ':', ';', '<', '=',
+         '>', '?', '@', '[', '\\', ']', '^', '_', '`', '{',
+         '|', '}', '~']
 
 def szyfruj(tekst):
     zaszyfrowany = ""
     for znak in tekst:
-        if ord(znak) > 31 and ord(znak) < 65 or ord(znak) > 90 and ord(znak) < 97 or ord(znak) > 122 and ord(znak) < 127:
+        if znak in znaki:
             zaszyfrowany += chr(ord(znak))
         elif ord(znak) > 90 - KLUCZ and ord(znak) < 97 - KLUCZ:
             zaszyfrowany += chr(ord(znak) + KLUCZ - 26)
@@ -23,7 +28,9 @@ def deszyfruj(tekst):
     odszyfrowany = ""
     KLUCZM = KLUCZ % 26
     for znak in tekst:
-        if (ord(znak) - KLUCZM < 65):
+        if znak in znaki:
+            odszyfrowany += chr(ord(znak))
+        elif (ord(znak) - KLUCZM < 65):
             odszyfrowany += chr(ord(znak) - KLUCZM + 26)
         elif (ord(znak) - KLUCZM < 97) and (ord(znak) - KLUCZM > 90):
             odszyfrowany += chr(ord(znak) - KLUCZM + 26)
