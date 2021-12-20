@@ -19,11 +19,14 @@ def szyfruj(tekst):
 
 def deszyfruj(tekst):
     odszyfrowany = ""
+    KLUCZM = KLUCZ % 26
     for znak in tekst:
-        if ord(znak) > 122 - KLUCZ:
-            odszyfrowany += chr(ord(znak) - KLUCZ + 26)
+        if (ord(znak) - KLUCZM < 65):
+            odszyfrowany += chr(ord(znak) - KLUCZM + 26)
+        elif (ord(znak) - KLUCZM < 97) and (ord(znak) - KLUCZM > 90):
+            odszyfrowany += chr(ord(znak) - KLUCZM + 26)
         else:
-            odszyfrowany += chr(ord(znak) - KLUCZ)
+            odszyfrowany += chr(ord(znak) - KLUCZM)
     return odszyfrowany
 
 
