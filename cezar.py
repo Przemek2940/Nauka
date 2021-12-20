@@ -8,7 +8,9 @@ KLUCZ = int(input("Jaki ma być klucz?\n"))
 def szyfruj(tekst):
     zaszyfrowany = ""
     for znak in tekst:
-        if ord(znak) > 90 - KLUCZ and ord(znak) < 97 - KLUCZ:
+        if ord(znak) > 31 and ord(znak) < 65 or ord(znak) > 90 and ord(znak) < 97 or ord(znak) > 122 and ord(znak) < 127:
+            zaszyfrowany += chr(ord(znak))
+        elif ord(znak) > 90 - KLUCZ and ord(znak) < 97 - KLUCZ:
             zaszyfrowany += chr(ord(znak) + KLUCZ - 26)
         elif ord(znak) > 122 - KLUCZ:
             zaszyfrowany += chr(ord(znak) + KLUCZ - 26)
