@@ -4,7 +4,7 @@ decyzja = input("""Jeśli chcesz zaszyfrować wiadomość - wpisz 1\n
 Jeśli chcesz odszyfrować wiadomość - wpisz 2\n""")
 KLUCZ = int(input("Jaki ma być klucz?\n"))
 
-znaki = [' ', '!', '"', '#', '$', '%', '&', "'", '(', ')',
+znaki = [' ', '!', '"', '#', '$', '%', '&', "'", '(', ')',      # znaki ktore beda pomijane w szyfrze
          '*', '+', ',', '-', '.', '/', '0', '1', '2', '3',
          '4', '5', '6', '7', '8', '9', ':', ';', '<', '=',
          '>', '?', '@', '[', '\\', ']', '^', '_', '`', '{',
