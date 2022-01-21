@@ -1,5 +1,5 @@
-#! /home/przemek2940/Python/bin python3
-# -*- coding: utf-8 -*
+#! /home/przemek2940/PycharmProjects/pythonProject2/venv/bin python3
+# -*- coding: utf-8 -*-
 
 import pylab
 
