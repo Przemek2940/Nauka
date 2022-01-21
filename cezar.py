@@ -1,4 +1,4 @@
-#! /home/przemek2940/PycharmProjects/pythonProject2/venv/bin python3
+#! /home/przemek2940/PycharmProjects/venv/bin python3
 # -*- coding: utf-8 -*-
 decyzja = input("""Jeśli chcesz zaszyfrować wiadomość - wpisz 1\n
 Jeśli chcesz odszyfrować wiadomość - wpisz 2\n""")
