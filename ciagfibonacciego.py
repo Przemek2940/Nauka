@@ -1,4 +1,4 @@
-#! /home/przemek2940/PycharmProjects/venv/bin python3
+#! /home/przemek2940/PycharmProjects/venv00/bin python3
 # -*- coding: utf-8 -*-
 
 def fib_iter1(n):
