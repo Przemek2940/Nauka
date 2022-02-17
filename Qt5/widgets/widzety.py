@@ -6,10 +6,12 @@ from PyQt5.QtWidgets import QApplication, QWidget
 from gui import Ui_Widget
 from PyQt5.QtGui import QColor
 
+
 class Widgety(QWidget, Ui_Widget):
 
     kanaly = {'R'}
     kolorW = QColor(0, 0, 0)
+
     def __init__(self, parent=None):
         super(Widgety, self).__init__(parent)
         self.setupUi(self)
@@ -55,7 +57,6 @@ class Widgety(QWidget, Ui_Widget):
         elif wartosc in self.kanaly:
             self.kanaly.remove(nadawca.text())
 
-
     def ustawStan(self, wartosc):
         if wartosc:
             self.listaRGB.setEnabled(False)
@@ -91,6 +92,7 @@ class Widgety(QWidget, Ui_Widget):
             self.kolorW.green(),
             self.kolorW.blue())
         self.info()
+
     def ustawKsztalt(self, wartosc):
         self.ksztaltAktywny.ustawKsztalt(wartosc)
 
@@ -103,6 +105,8 @@ class Widgety(QWidget, Ui_Widget):
             self.ksztaltAktywny = self.ksztalt2
             nadawca.setText('=>')
         self.grupaChk.buttons()[self.ksztaltAktywny.ksztalt].setChecked(True)
+
+
 if __name__ == '__main__':
     import sys
 
